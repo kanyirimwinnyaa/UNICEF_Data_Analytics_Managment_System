@@ -27,7 +27,7 @@ namespace UNICEFDataManagmentSystem
             Region_Panel.Hide();
             Vaccine_Panel.Hide();
         }
-
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-4U5DGULG\\SQLEXPRESS;Database=UNICEF_Data_Analytics;Integrated Security=True;TrustServerCertificate=True;");
         private void Region_Tab_Click(object sender, EventArgs e)
         {
             Vaccine_Panel.Hide();
@@ -49,7 +49,6 @@ namespace UNICEFDataManagmentSystem
         {
             try
             {
-                SqlConnection con = new SqlConnection("Data Source=LAPTOP-4U5DGULG\\SQLEXPRESS;Database=UNICEF_Data_Analytics;Integrated Security=True;TrustServerCertificate=True");
                 con.Open();
                 SqlCommand com = new SqlCommand("insert into Region values ('" + int.Parse(Region_ID_Input.Text) + "' , '" + Region_Name_Input.Text + "' , '" + iso3_Input.Text + "')", con);
                 com.ExecuteNonQuery();
@@ -70,28 +69,25 @@ namespace UNICEFDataManagmentSystem
 
         private void Update_Region_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(
-            "Data Source=LAPTOP-4U5DGULG\\SQLEXPRESS;Database=UNICEF_Data_Analytics;Integrated Security=True;TrustServerCertificate=True;"))
-            {
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Region", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Region_DataGridView.DataSource = dt;
                 con.Close();
-            }
         }
         private void Delete_Region_Click(object sender, EventArgs e)
-        {
-            SqlCommand com = new SqlCommand("Delete Region where Region_ID = '" + int.Parse(Region_ID_Input.Text) + "'");
-            com.ExecuteNonQuery();
+        { 
+                con.Open();
+                SqlCommand com = new SqlCommand("Delete Region Where Region_ID = '" + int.Parse(Region_ID_Input.Text) + "'", con);
+                com.ExecuteNonQuery();
+                con.Close();
         }
 
         private void Add_Vaccine_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection("Data Source=LAPTOP-4U5DGULG\\SQLEXPRESS;Database=UNICEF_Data_Analytics;Integrated Security=True;TrustServerCertificate=True");
                 con.Open();
                 SqlCommand com = new SqlCommand("insert into Vaccine values ('" + int.Parse(Vaccine_ID_Input.Text) + "' , '" + Vaccine_Name_Input.Text + "' , '" + Vaccine_Year_Input.Text + "')", con);
                 com.ExecuteNonQuery();
@@ -111,20 +107,18 @@ namespace UNICEFDataManagmentSystem
 
         private void Update_Vaccine_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(
-            "Data Source=LAPTOP-4U5DGULG\\SQLEXPRESS;Database=UNICEF_Data_Analytics;Integrated Security=True;TrustServerCertificate=True;"))
-            {
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Vaccine", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Vaccine_DataGridView.DataSource = dt;
-            }
         }
 
         private void Delate_Vaccine_Click(object sender, EventArgs e)
         {
-            SqlCommand com = new SqlCommand("Delete Vaccine where Vaccine_ID = '"+int.Parse(Vaccine_ID_Input.Text)+"'");
+            con.Open();
+            SqlCommand com = new SqlCommand("Delete Vaccine Where Vaccine_ID = '"+int.Parse(Vaccine_ID_Input.Text)+"'");
             com.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

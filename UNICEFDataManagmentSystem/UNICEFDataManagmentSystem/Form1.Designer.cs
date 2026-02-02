@@ -195,9 +195,9 @@
             this.Vaccine_Panel.Controls.Add(this.label7);
             this.Vaccine_Panel.Controls.Add(this.Vaccine_ID_Input);
             this.Vaccine_Panel.Controls.Add(this.label6);
-            this.Vaccine_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Vaccine_Panel.Location = new System.Drawing.Point(0, 218);
             this.Vaccine_Panel.Name = "Vaccine_Panel";
-            this.Vaccine_Panel.Size = new System.Drawing.Size(542, 536);
+            this.Vaccine_Panel.Size = new System.Drawing.Size(542, 318);
             this.Vaccine_Panel.TabIndex = 12;
             // 
             // Search_Vaccine
