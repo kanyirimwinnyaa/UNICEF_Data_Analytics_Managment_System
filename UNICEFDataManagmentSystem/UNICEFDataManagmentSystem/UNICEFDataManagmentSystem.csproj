@@ -69,6 +69,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UNICEF_Data_AnalyticsDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UNICEF_Data_AnalyticsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UNICEF_Data_AnalyticsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +132,28 @@
     </None>
     <None Include="UNICEF_Data_AnalyticsDataSet2.xss">
       <DependentUpon>UNICEF_Data_AnalyticsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet3.xsc">
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNICEF_Data_AnalyticsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet3.xss">
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet4.xsc">
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNICEF_Data_AnalyticsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNICEF_Data_AnalyticsDataSet4.xss">
+      <DependentUpon>UNICEF_Data_AnalyticsDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

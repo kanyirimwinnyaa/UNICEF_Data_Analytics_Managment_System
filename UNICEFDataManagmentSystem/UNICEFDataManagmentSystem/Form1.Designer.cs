@@ -38,8 +38,8 @@
             this.Main_DataGridView = new System.Windows.Forms.DataGridView();
             this.Region_Panel = new System.Windows.Forms.Panel();
             this.Vaccine_Panel = new System.Windows.Forms.Panel();
-            this.Search_Vaccine = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Search_Vaccine = new System.Windows.Forms.Button();
+            this.Search_Vaccine_Input = new System.Windows.Forms.TextBox();
             this.Delate_Vaccine = new System.Windows.Forms.Button();
             this.Update_Vaccine = new System.Windows.Forms.Button();
             this.Add_Vaccine = new System.Windows.Forms.Button();
@@ -65,7 +65,6 @@
             this.Delete_Region = new System.Windows.Forms.Button();
             this.Add_Region = new System.Windows.Forms.Button();
             this.Regon_Search = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.iso3_Input = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Region_Name_Input = new System.Windows.Forms.TextBox();
@@ -76,6 +75,31 @@
             this.uNICEFDataAnalyticsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uNICEFDataAnalyticsDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vaccineTableAdapter = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet2TableAdapters.VaccineTableAdapter();
+            this.Hospital_Panel = new System.Windows.Forms.Panel();
+            this.Hospital_DataGridView = new System.Windows.Forms.DataGridView();
+            this.hospitalIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.uNICEF_Data_AnalyticsDataSet1 = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet1();
+            this.Delete_Hospital = new System.Windows.Forms.Button();
+            this.Update_Hospital = new System.Windows.Forms.Button();
+            this.Add_Hospital = new System.Windows.Forms.Button();
+            this.Search_Hospital = new System.Windows.Forms.TextBox();
+            this.Hospital_Name_Input = new System.Windows.Forms.TextBox();
+            this.Hospital_ID_Input = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uNICEF_Data_AnalyticsDataSet3 = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet3();
+            this.hospitalTableAdapter = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet3TableAdapters.HospitalTableAdapter();
+            this.regionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.regionTableAdapter1 = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet1TableAdapters.RegionTableAdapter();
+            this.hospitalTableAdapter1 = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet1TableAdapters.HospitalTableAdapter();
+            this.uNICEF_Data_AnalyticsDataSet4 = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet4();
+            this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainTableAdapter = new UNICEFDataManagmentSystem.UNICEF_Data_AnalyticsDataSet4TableAdapters.MainTableAdapter();
+            this.Hospital_Search = new System.Windows.Forms.Button();
+            this.Search_Region = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Main_DataGridView)).BeginInit();
             this.Region_Panel.SuspendLayout();
             this.Vaccine_Panel.SuspendLayout();
@@ -87,6 +111,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.UNICEF_Data_AnalyticsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNICEFDataAnalyticsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNICEFDataAnalyticsDataSetBindingSource1)).BeginInit();
+            this.Hospital_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Hospital_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,7 +148,7 @@
             this.Region_Tab.Name = "Region_Tab";
             this.Region_Tab.Size = new System.Drawing.Size(92, 39);
             this.Region_Tab.TabIndex = 2;
-            this.Region_Tab.Text = "Regon";
+            this.Region_Tab.Text = "Region";
             this.Region_Tab.UseVisualStyleBackColor = true;
             this.Region_Tab.Click += new System.EventHandler(this.Region_Tab_Click);
             // 
@@ -139,6 +172,7 @@
             this.Hospital_Tab.TabIndex = 4;
             this.Hospital_Tab.Text = "Hospital";
             this.Hospital_Tab.UseVisualStyleBackColor = true;
+            this.Hospital_Tab.Click += new System.EventHandler(this.Hospital_Tab_Click);
             // 
             // Vaccine_Tab
             // 
@@ -163,13 +197,13 @@
             // 
             // Region_Panel
             // 
+            this.Region_Panel.Controls.Add(this.Search_Region);
             this.Region_Panel.Controls.Add(this.Vaccine_Panel);
             this.Region_Panel.Controls.Add(this.Region_DataGridView);
             this.Region_Panel.Controls.Add(this.Update_Region);
             this.Region_Panel.Controls.Add(this.Delete_Region);
             this.Region_Panel.Controls.Add(this.Add_Region);
             this.Region_Panel.Controls.Add(this.Regon_Search);
-            this.Region_Panel.Controls.Add(this.label5);
             this.Region_Panel.Controls.Add(this.iso3_Input);
             this.Region_Panel.Controls.Add(this.label4);
             this.Region_Panel.Controls.Add(this.Region_Name_Input);
@@ -184,7 +218,7 @@
             // Vaccine_Panel
             // 
             this.Vaccine_Panel.Controls.Add(this.Search_Vaccine);
-            this.Vaccine_Panel.Controls.Add(this.label9);
+            this.Vaccine_Panel.Controls.Add(this.Search_Vaccine_Input);
             this.Vaccine_Panel.Controls.Add(this.Delate_Vaccine);
             this.Vaccine_Panel.Controls.Add(this.Update_Vaccine);
             this.Vaccine_Panel.Controls.Add(this.Add_Vaccine);
@@ -195,28 +229,28 @@
             this.Vaccine_Panel.Controls.Add(this.label7);
             this.Vaccine_Panel.Controls.Add(this.Vaccine_ID_Input);
             this.Vaccine_Panel.Controls.Add(this.label6);
-            this.Vaccine_Panel.Location = new System.Drawing.Point(0, 218);
+            this.Vaccine_Panel.Location = new System.Drawing.Point(0, 0);
             this.Vaccine_Panel.Name = "Vaccine_Panel";
-            this.Vaccine_Panel.Size = new System.Drawing.Size(542, 318);
+            this.Vaccine_Panel.Size = new System.Drawing.Size(542, 536);
             this.Vaccine_Panel.TabIndex = 12;
             // 
             // Search_Vaccine
             // 
-            this.Search_Vaccine.Location = new System.Drawing.Point(73, 123);
+            this.Search_Vaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Vaccine.Location = new System.Drawing.Point(24, 120);
             this.Search_Vaccine.Name = "Search_Vaccine";
-            this.Search_Vaccine.Size = new System.Drawing.Size(436, 20);
-            this.Search_Vaccine.TabIndex = 11;
+            this.Search_Vaccine.Size = new System.Drawing.Size(75, 23);
+            this.Search_Vaccine.TabIndex = 13;
+            this.Search_Vaccine.Text = "Search";
+            this.Search_Vaccine.UseVisualStyleBackColor = true;
+            this.Search_Vaccine.Click += new System.EventHandler(this.Search_Vaccine_Click);
             // 
-            // label9
+            // Search_Vaccine_Input
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 124);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
-            this.label9.TabIndex = 10;
-            this.label9.Tag = "";
-            this.label9.Text = "Search";
+            this.Search_Vaccine_Input.Location = new System.Drawing.Point(105, 123);
+            this.Search_Vaccine_Input.Name = "Search_Vaccine_Input";
+            this.Search_Vaccine_Input.Size = new System.Drawing.Size(404, 20);
+            this.Search_Vaccine_Input.TabIndex = 11;
             // 
             // Delate_Vaccine
             // 
@@ -428,20 +462,10 @@
             // 
             // Regon_Search
             // 
-            this.Regon_Search.Location = new System.Drawing.Point(85, 108);
+            this.Regon_Search.Location = new System.Drawing.Point(105, 108);
             this.Regon_Search.Name = "Regon_Search";
-            this.Regon_Search.Size = new System.Drawing.Size(446, 20);
+            this.Regon_Search.Size = new System.Drawing.Size(426, 20);
             this.Regon_Search.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Search";
             // 
             // iso3_Input
             // 
@@ -512,12 +536,207 @@
             // 
             this.vaccineTableAdapter.ClearBeforeFill = true;
             // 
+            // Hospital_Panel
+            // 
+            this.Hospital_Panel.Controls.Add(this.Hospital_Search);
+            this.Hospital_Panel.Controls.Add(this.Hospital_DataGridView);
+            this.Hospital_Panel.Controls.Add(this.Delete_Hospital);
+            this.Hospital_Panel.Controls.Add(this.Update_Hospital);
+            this.Hospital_Panel.Controls.Add(this.Add_Hospital);
+            this.Hospital_Panel.Controls.Add(this.Search_Hospital);
+            this.Hospital_Panel.Controls.Add(this.Hospital_Name_Input);
+            this.Hospital_Panel.Controls.Add(this.Hospital_ID_Input);
+            this.Hospital_Panel.Controls.Add(this.label11);
+            this.Hospital_Panel.Controls.Add(this.label10);
+            this.Hospital_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hospital_Panel.Location = new System.Drawing.Point(0, 65);
+            this.Hospital_Panel.Name = "Hospital_Panel";
+            this.Hospital_Panel.Size = new System.Drawing.Size(545, 536);
+            this.Hospital_Panel.TabIndex = 12;
+            // 
+            // Hospital_DataGridView
+            // 
+            this.Hospital_DataGridView.AllowUserToDeleteRows = false;
+            this.Hospital_DataGridView.AutoGenerateColumns = false;
+            this.Hospital_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Hospital_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hospitalIDDataGridViewTextBoxColumn,
+            this.hospitalNameDataGridViewTextBoxColumn});
+            this.Hospital_DataGridView.DataSource = this.hospitalBindingSource1;
+            this.Hospital_DataGridView.Location = new System.Drawing.Point(0, 136);
+            this.Hospital_DataGridView.Name = "Hospital_DataGridView";
+            this.Hospital_DataGridView.ReadOnly = true;
+            this.Hospital_DataGridView.Size = new System.Drawing.Size(545, 368);
+            this.Hospital_DataGridView.TabIndex = 10;
+            // 
+            // hospitalIDDataGridViewTextBoxColumn
+            // 
+            this.hospitalIDDataGridViewTextBoxColumn.DataPropertyName = "Hospital_ID";
+            this.hospitalIDDataGridViewTextBoxColumn.HeaderText = "Hospital_ID";
+            this.hospitalIDDataGridViewTextBoxColumn.Name = "hospitalIDDataGridViewTextBoxColumn";
+            this.hospitalIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hospitalNameDataGridViewTextBoxColumn
+            // 
+            this.hospitalNameDataGridViewTextBoxColumn.DataPropertyName = "Hospital_Name";
+            this.hospitalNameDataGridViewTextBoxColumn.HeaderText = "Hospital_Name";
+            this.hospitalNameDataGridViewTextBoxColumn.Name = "hospitalNameDataGridViewTextBoxColumn";
+            this.hospitalNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hospitalBindingSource1
+            // 
+            this.hospitalBindingSource1.DataMember = "Hospital";
+            this.hospitalBindingSource1.DataSource = this.uNICEF_Data_AnalyticsDataSet1;
+            // 
+            // uNICEF_Data_AnalyticsDataSet1
+            // 
+            this.uNICEF_Data_AnalyticsDataSet1.DataSetName = "UNICEF_Data_AnalyticsDataSet1";
+            this.uNICEF_Data_AnalyticsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Delete_Hospital
+            // 
+            this.Delete_Hospital.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_Hospital.Location = new System.Drawing.Point(162, 510);
+            this.Delete_Hospital.Name = "Delete_Hospital";
+            this.Delete_Hospital.Size = new System.Drawing.Size(75, 23);
+            this.Delete_Hospital.TabIndex = 9;
+            this.Delete_Hospital.Text = "Delete";
+            this.Delete_Hospital.UseVisualStyleBackColor = true;
+            this.Delete_Hospital.Click += new System.EventHandler(this.Delete_Hospital_Click);
+            // 
+            // Update_Hospital
+            // 
+            this.Update_Hospital.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_Hospital.Location = new System.Drawing.Point(81, 510);
+            this.Update_Hospital.Name = "Update_Hospital";
+            this.Update_Hospital.Size = new System.Drawing.Size(75, 23);
+            this.Update_Hospital.TabIndex = 8;
+            this.Update_Hospital.Text = "Update";
+            this.Update_Hospital.UseVisualStyleBackColor = true;
+            this.Update_Hospital.Click += new System.EventHandler(this.Update_Hospital_Click);
+            // 
+            // Add_Hospital
+            // 
+            this.Add_Hospital.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Hospital.Location = new System.Drawing.Point(4, 510);
+            this.Add_Hospital.Name = "Add_Hospital";
+            this.Add_Hospital.Size = new System.Drawing.Size(75, 23);
+            this.Add_Hospital.TabIndex = 7;
+            this.Add_Hospital.Text = "Add";
+            this.Add_Hospital.UseVisualStyleBackColor = true;
+            this.Add_Hospital.Click += new System.EventHandler(this.Add_Hospital_Click);
+            // 
+            // Search_Hospital
+            // 
+            this.Search_Hospital.Location = new System.Drawing.Point(79, 108);
+            this.Search_Hospital.Name = "Search_Hospital";
+            this.Search_Hospital.Size = new System.Drawing.Size(432, 22);
+            this.Search_Hospital.TabIndex = 5;
+            // 
+            // Hospital_Name_Input
+            // 
+            this.Hospital_Name_Input.Location = new System.Drawing.Point(131, 74);
+            this.Hospital_Name_Input.Name = "Hospital_Name_Input";
+            this.Hospital_Name_Input.Size = new System.Drawing.Size(380, 22);
+            this.Hospital_Name_Input.TabIndex = 3;
+            // 
+            // Hospital_ID_Input
+            // 
+            this.Hospital_ID_Input.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hospital_ID_Input.Location = new System.Drawing.Point(107, 33);
+            this.Hospital_ID_Input.Name = "Hospital_ID_Input";
+            this.Hospital_ID_Input.Size = new System.Drawing.Size(402, 22);
+            this.Hospital_ID_Input.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(17, 75);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 16);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Hospital Name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Hospital ID";
+            // 
+            // hospitalBindingSource
+            // 
+            this.hospitalBindingSource.DataMember = "Hospital";
+            this.hospitalBindingSource.DataSource = this.uNICEF_Data_AnalyticsDataSet3;
+            // 
+            // uNICEF_Data_AnalyticsDataSet3
+            // 
+            this.uNICEF_Data_AnalyticsDataSet3.DataSetName = "UNICEF_Data_AnalyticsDataSet3";
+            this.uNICEF_Data_AnalyticsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hospitalTableAdapter
+            // 
+            this.hospitalTableAdapter.ClearBeforeFill = true;
+            // 
+            // regionBindingSource1
+            // 
+            this.regionBindingSource1.DataMember = "Region";
+            this.regionBindingSource1.DataSource = this.uNICEF_Data_AnalyticsDataSet1;
+            // 
+            // regionTableAdapter1
+            // 
+            this.regionTableAdapter1.ClearBeforeFill = true;
+            // 
+            // hospitalTableAdapter1
+            // 
+            this.hospitalTableAdapter1.ClearBeforeFill = true;
+            // 
+            // uNICEF_Data_AnalyticsDataSet4
+            // 
+            this.uNICEF_Data_AnalyticsDataSet4.DataSetName = "UNICEF_Data_AnalyticsDataSet4";
+            this.uNICEF_Data_AnalyticsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mainBindingSource
+            // 
+            this.mainBindingSource.DataMember = "Main";
+            this.mainBindingSource.DataSource = this.uNICEF_Data_AnalyticsDataSet4;
+            // 
+            // mainTableAdapter
+            // 
+            this.mainTableAdapter.ClearBeforeFill = true;
+            // 
+            // Hospital_Search
+            // 
+            this.Hospital_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hospital_Search.Location = new System.Drawing.Point(3, 107);
+            this.Hospital_Search.Name = "Hospital_Search";
+            this.Hospital_Search.Size = new System.Drawing.Size(75, 23);
+            this.Hospital_Search.TabIndex = 14;
+            this.Hospital_Search.Text = "Search";
+            this.Hospital_Search.UseVisualStyleBackColor = true;
+            this.Hospital_Search.Click += new System.EventHandler(this.Hospital_Search_Click);
+            // 
+            // Search_Region
+            // 
+            this.Search_Region.Location = new System.Drawing.Point(24, 105);
+            this.Search_Region.Name = "Search_Region";
+            this.Search_Region.Size = new System.Drawing.Size(73, 23);
+            this.Search_Region.TabIndex = 13;
+            this.Search_Region.Text = "Search";
+            this.Search_Region.UseVisualStyleBackColor = true;
+            this.Search_Region.Click += new System.EventHandler(this.Search_Region_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(543, 600);
+            this.Controls.Add(this.Hospital_Panel);
             this.Controls.Add(this.Region_Panel);
             this.Controls.Add(this.Main_DataGridView);
             this.Controls.Add(this.Vaccine_Tab);
@@ -527,7 +746,9 @@
             this.Controls.Add(this.Main_Search);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UNICEF Data Analytics and Datawork";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Main_DataGridView)).EndInit();
@@ -543,6 +764,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.UNICEF_Data_AnalyticsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNICEFDataAnalyticsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNICEFDataAnalyticsDataSetBindingSource1)).EndInit();
+            this.Hospital_Panel.ResumeLayout(false);
+            this.Hospital_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Hospital_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNICEF_Data_AnalyticsDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,7 +799,6 @@
         private System.Windows.Forms.Button Delete_Region;
         private System.Windows.Forms.Button Add_Region;
         private System.Windows.Forms.TextBox Regon_Search;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView Region_DataGridView;
         private UNICEF_Data_AnalyticsDataSet UNICEF_Data_AnalyticsDataSet;
         private System.Windows.Forms.BindingSource regionBindingSource;
@@ -587,8 +817,7 @@
         private System.Windows.Forms.DataGridView Vaccine_DataGridView;
         private System.Windows.Forms.TextBox Vaccine_Year_Input;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Search_Vaccine;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Search_Vaccine_Input;
         private System.Windows.Forms.BindingSource uNICEFDataAnalyticsDataSetBindingSource1;
         private System.Windows.Forms.BindingSource uNICEFDataAnalyticsDataSetBindingSource;
         private UNICEF_Data_AnalyticsDataSet2 uNICEF_Data_AnalyticsDataSet2;
@@ -597,6 +826,32 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vaccineIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vaccineNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vaccineYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel Hospital_Panel;
+        private System.Windows.Forms.TextBox Hospital_ID_Input;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox Search_Hospital;
+        private System.Windows.Forms.TextBox Hospital_Name_Input;
+        private System.Windows.Forms.Button Delete_Hospital;
+        private System.Windows.Forms.Button Update_Hospital;
+        private System.Windows.Forms.Button Add_Hospital;
+        private UNICEF_Data_AnalyticsDataSet3 uNICEF_Data_AnalyticsDataSet3;
+        private System.Windows.Forms.BindingSource hospitalBindingSource;
+        private UNICEF_Data_AnalyticsDataSet3TableAdapters.HospitalTableAdapter hospitalTableAdapter;
+        private System.Windows.Forms.DataGridView Hospital_DataGridView;
+        private UNICEF_Data_AnalyticsDataSet1 uNICEF_Data_AnalyticsDataSet1;
+        private System.Windows.Forms.BindingSource regionBindingSource1;
+        private UNICEF_Data_AnalyticsDataSet1TableAdapters.RegionTableAdapter regionTableAdapter1;
+        private System.Windows.Forms.BindingSource hospitalBindingSource1;
+        private UNICEF_Data_AnalyticsDataSet1TableAdapters.HospitalTableAdapter hospitalTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hospitalIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hospitalNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button Search_Vaccine;
+        private UNICEF_Data_AnalyticsDataSet4 uNICEF_Data_AnalyticsDataSet4;
+        private System.Windows.Forms.BindingSource mainBindingSource;
+        private UNICEF_Data_AnalyticsDataSet4TableAdapters.MainTableAdapter mainTableAdapter;
+        private System.Windows.Forms.Button Hospital_Search;
+        private System.Windows.Forms.Button Search_Region;
     }
 }
 
